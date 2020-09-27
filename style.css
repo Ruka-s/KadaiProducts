@@ -1,0 +1,292 @@
+/*
+img {
+    float: left;
+}
+*/
+
+@font-face {
+    /*フォントの名前*/
+    font-family: "hiragino";
+    /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
+    src: url("/fonts/Futura-Med.ttf") format("ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: auto;
+    height: 650px;
+    /*
+    background: url(/images/introduction_001.jpg) 0 0 no-repeat;
+    background-size: cover;
+*/
+    position: relative;
+    /*    margin-bottom: 30px;*/
+    background-position: center center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav {
+    float: right;
+    width: 600px;
+    height: 36px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 35px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 20pt;
+    transition: 0.5s;
+    font-family: Futura;
+}
+
+nav a:hover {
+    color: #3D5CDB;
+}
+
+header .logo {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 900px;
+    height: 450px;
+}
+
+header h1 {
+    margin-top: 27px;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    font-style: oblique;
+    font-family: Futura;
+}
+
+.Introduction {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    /*縦並び*/
+    justify-content: center;
+    /*中央よせ*/
+    align-content: space-between;
+}
+
+
+h2 {
+    text-align: center;
+    color: #3D5CDB;
+    font-size: 55px;
+    font-family: Futura;
+    font-weight: 200;
+    padding-top: 40px;
+}
+
+.rightbox {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    /*    border-style: solid; border-width: 1px;*/
+}
+
+.rightbox img {
+    float: left;
+    width: 500px;
+    height: 330px;
+}
+
+.leftbox {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 90px;
+    height: 330px;
+    margin-bottom: 70px;
+    /*    border-style: solid; border-width: 1px;*/
+}
+
+.leftbox img {
+    float: left;
+    width: 500px;
+    height: 330px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    width: 400px;
+    height: 250px;
+    padding-left: 20px;
+}
+
+.content p {
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Hiragino Kaku Gothic Pro';
+    line-height: 20px;
+    margin: 15px auto 20px;
+    padding-top: 15px;
+    border-width: 3px;
+}
+
+.content a {
+    display: block;
+    margin: 30px auto;
+    text-decoration: none;
+    width: 170px;
+    height: 40px;
+    background-color: #3D5CDB;
+    color: #ffffff;
+    font-size: 15pt;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#Courses {
+/*    overflow: hidden;*/
+/*    width: 100vw;*/
+    height:100vw;
+    background-color: rgba(186, 213, 245, 0.3);
+    position: relative;
+/*    z-index: 1;*/
+}
+
+#particles{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 600;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+/*    z-index:  -1;*/
+}
+
+.Courses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: block;
+    margin: 50px auto;
+    padding-top: 20px;
+    text-decoration: none;
+    width: 240px;
+    height: 320px;
+    border-radius: 12px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15pt;
+    font-weight: bold;
+/*    z-index:1;*/
+}
+
+.box a{
+    display: block;
+    margin: 30px auto;
+    text-decoration: none;
+    width: 170px;
+    height: 40px;
+    background-color: #3D5CDB;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 40px;
+}
+.box img{
+    width:130px;
+    height:130px;
+}
+
+/*
+#coursebutton {
+   background-color: rgba(186, 213, 245, 0.6);
+    z-index: 1;
+}
+*/
+#HTML #coursebutton{
+    background-color: #F16529;
+}
+#CSS #coursebutton{
+    background-color: #2AA9DF;
+}
+#Unity #coursebutton{
+    background-color: #333333;
+}
+#Ruby #coursebutton{
+    background-color: #FF5252;
+}
+#JavaScript #coursebutton{
+    background-color: #FFD700;
+}
+#Swift #coursebutton{
+    background-color: #FF7635;
+}
+#Go #coursebutton{
+    background-color: #73CFDD;
+}
+
+.Images img{
+    width:200px;
+    height:135px;
+    
+}
+.Access{
+    
+}
+
+iframe{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:55px;
+}
+footer{
+    height:140px;
+}
+footer h4{
+    margin-top: 60px;
+    font-size:16px;
+    color:#3D5CDB;
+    text-align: center;
+}
+
+
+
