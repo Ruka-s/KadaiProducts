@@ -128,7 +128,6 @@ h2 {
     margin-top: 90px;
     height: 330px;
     margin-bottom: 70px;
-    /*    border-style: solid; border-width: 1px;*/
 }
 
 .leftbox img {
@@ -172,51 +171,42 @@ h2 {
     line-height: 40px;
 }
 
+
 #Courses {
-/*    overflow: hidden;*/
-/*    width: 100vw;*/
-    height:100vw;
-    background-color: rgba(186, 213, 245, 0.3);
-    position: relative;
-/*    z-index: 1;*/
+    overflow: hidden;
+    position:relative;
+    height:auto;
 }
 
 #particles{
+    background-color: rgba(186, 213, 245, 0.4);
+    position:absolute;
+    top:0; left:0;
+    height: 100%;
     width: 100%;
-    position: absolute;
-    top: 600;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-/*    z-index:  -1;*/
+    z-index:-1;
+}
+.contents{
+    position:relative;
+    z-index: 2;
 }
 
+#Courses h2{
+    padding-top: 50px;
+    padding-bottom: 70px;
+    
+}
 .Courses {
-    position:absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.upperbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.bottombox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    align-content: space-around;
 }
 
 .box {
     display: block;
-    margin: 50px auto;
-    margin-right: 10px;
     padding-top: 20px;
+    margin-bottom: 30px;
     text-decoration: none;
     width: 240px;
     height: 320px;
@@ -226,7 +216,9 @@ h2 {
     line-height: 40px;
     font-size: 15pt;
     font-weight: bold;
-/*    z-index:1;*/
+}
+.box:last-child{
+    margin-bottom: 60px;
 }
 
 .box a{
@@ -247,13 +239,6 @@ h2 {
     width:130px;
     height:130px;
 }
-
-/*
-#coursebutton {
-   background-color: rgba(186, 213, 245, 0.6);
-    z-index: 1;
-}
-*/
 #HTML #coursebutton{
     background-color: #F16529;
 }

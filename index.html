@@ -10,6 +10,15 @@
     <script src="./js/jquery.bxslider.min.js"></script>
     <title>Happy Hack</title>
     <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    <script>
+        $(document).ready(function() {
+            $('.slider').bxSlider({
+                mode: "fade",
+                auto: "true",
+                controls: false
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -56,11 +65,12 @@
     </div>
 
     <div id="Courses">
-        <div id="particles">
+        <div id="particles"></div>
+        <div class="contents">
             <h2>Courses</h2>
             <div class="Courses">
-               <div class="upperbox">
-                   <div class="box" id="HTML">
+
+                <div class="box" id="HTML">
                     <img src="/images/html.png" alt="">
                     <h5>HTMLコース</h5>
                     <a href="#Courses" id="coursebutton">このコースを受ける</a>
@@ -80,9 +90,9 @@
                     <h5>Rubyコース</h5>
                     <a href="#Courses" id="coursebutton">このコースを受ける</a>
                 </div>
-               </div>
-               <div class="bottombox">
-                   <div class="box" id="JavaScript">
+
+
+                <div class="box" id="JavaScript">
                     <img src="/images/js.png" alt="">
                     <h5>JavaScriptコース</h5>
                     <a href="#Courses" id="coursebutton">このコースを受ける</a>
@@ -97,21 +107,20 @@
                     <h5>Goコース</h5>
                     <a href="#Courses" id="coursebutton">このコースを受ける</a>
                 </div>
-               </div>
-                
             </div>
+
         </div>
     </div>
 
     <div class="Images" id="Images">
         <h2>Images</h2>
         <div class="slider">
-          <div><img src="images/hero.jpg" alt=""></div>
-          <div><img src="images/background2.jpg" alt=""></div>
-          <div><img src="images/background3.jpg" alt=""></div>
-          <div><img src="images/background4.jpg" alt=""></div>
-          <div><img src="images/background5.jpg" alt=""></div>
-    </div>
+            <div><img src="images/hero.jpg" alt=""></div>
+            <div><img src="images/background2.jpg" alt=""></div>
+            <div><img src="images/background3.jpg" alt=""></div>
+            <div><img src="images/background4.jpg" alt=""></div>
+            <div><img src="images/background5.jpg" alt=""></div>
+        </div>
 
     </div>
 
@@ -126,21 +135,9 @@
     <footer>
         <h4>&copy; 2019 Happy Hack Inc</h4>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="./js/jquery.bgswitcher.js"></script>
     <script src="./js/bgswitcher-set.js"></script>
     <script src="./js/particles.js"></script>
     <script src="./js/particles-set.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.slider').bxSlider({
-                mode:"fade",
-                auto:"true",
-                controls:false
-            });
-        });
-
-    </script>
-</body>
-
-</html>
+    
+</body></html>
