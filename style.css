@@ -19,12 +19,7 @@ img {
 header {
     width: auto;
     height: 650px;
-    /*
-    background: url(/images/introduction_001.jpg) 0 0 no-repeat;
-    background-size: cover;
-*/
     position: relative;
-    /*    margin-bottom: 30px;*/
     background-position: center center;
     background-size: cover;
     align-items: center;
@@ -235,10 +230,7 @@ h2 {
     text-align: center;
     line-height: 40px;
 }
-.box img{
-    width:130px;
-    height:130px;
-}
+
 #HTML #coursebutton{
     background-color: #F16529;
 }
@@ -261,15 +253,21 @@ h2 {
     background-color: #73CFDD;
 }
 
-.Images img{
-    width:200px;
-    height:135px;
+.slide{
+    padding-top: 80px;
+    width:840px;
+    height:140px;
+    border: none;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+.slider div img{
+    width:210px;
+    height:140px;
     
 }
-.Access{
-    
-}
-
 iframe{
     display: block;
     margin-right: auto;
@@ -285,6 +283,25 @@ footer h4{
     color:#3D5CDB;
     text-align: center;
 }
-
+.fuwatAnime {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:1.5s;
+ -ms-animation-duration:1.5s;
+ animation-duration:1.5s;
+ -webkit-animation-name: fuwatAnime;
+ -ms-animation-name: fuwatAnime;
+ animation-name: fuwatAnime;
+ visibility: visible !important;
+}
+@-webkit-keyframes fuwatAnime {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fuwatAnime {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
 
 

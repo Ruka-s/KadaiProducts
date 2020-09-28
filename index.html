@@ -3,22 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="jquery.bxslider.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./js/jquery.bxslider.min.js"></script>
+<!--        <script src="./js/jquery.bxslider.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <!--    <link rel="stylesheet" href="jquery.bxslider.min.css">-->
+    <link rel="stylesheet" href="style.css">
     <title>Happy Hack</title>
-    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
-    <script>
-        $(document).ready(function() {
-            $('.slider').bxSlider({
-                mode: "fade",
-                auto: "true",
-                controls: false
-            });
-        });
-    </script>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 
 <body>
@@ -40,7 +33,7 @@
 
     <!--    サイトの中身部分　　　-->
 
-    <div class="Introduction" id="Introduction">
+    <div class="Introduction fuwat" id="Introduction">
         <h2>Introduction</h2>
 
         <div class="rightbox">
@@ -64,7 +57,7 @@
         </div>
     </div>
 
-    <div id="Courses">
+    <div id="Courses  fuwat">
         <div id="particles"></div>
         <div class="contents">
             <h2>Courses</h2>
@@ -112,7 +105,7 @@
         </div>
     </div>
 
-    <div class="Images" id="Images">
+    <div class="Images fuwat" id="Images">
         <h2>Images</h2>
         <div class="slider">
             <div><img src="images/hero.jpg" alt=""></div>
@@ -121,10 +114,21 @@
             <div><img src="images/background4.jpg" alt=""></div>
             <div><img src="images/background5.jpg" alt=""></div>
         </div>
-
     </div>
+    <!--
+    <script>
+        $(document).ready(function() {
+            $('.slider').bxSlider({
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                controls: false
+            });
+        });
+    </script>
+-->
 
-    <div class="Access" id="Access">
+    <div class="Access fuwat" id="Access">
         <h2>Access</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6560.6262797845075!2d135.492449!3d34.697281!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9fec1659611f776f!2zTGlmZSBpcyBUZWNoISDlpKfpmKrjgqrjg5XjgqPjgrk!5e0!3m2!1sja!2sjp!4v1601172326353!5m2!1sja!2sjp" width="600" height="400" frameborder="0" style="border:0; " allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
@@ -135,9 +139,28 @@
     <footer>
         <h4>&copy; 2019 Happy Hack Inc</h4>
     </footer>
+    
+    <script type="text/javascript">
+$(document).ready(function(){
+  $('.fuwat').css('visibility','hidden');
+  $(window).scroll(function(){
+   var windowHeight = $(window).height(),
+       topWindow = $(window).scrollTop();
+   $('.fuwat').each(function(){
+    var objectPosition = $(this).offset().top;
+    if(topWindow > objectPosition - windowHeight + 200){
+     $(this).addClass("fuwatAnime");
+    }
+   });
+  });
+});
+</script>
+
     <script src="./js/jquery.bgswitcher.js"></script>
     <script src="./js/bgswitcher-set.js"></script>
     <script src="./js/particles.js"></script>
     <script src="./js/particles-set.js"></script>
-    
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/func_slick.js"></script>
+
 </body></html>
