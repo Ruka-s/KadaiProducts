@@ -15,15 +15,17 @@ img {
     margin: 0;
     padding: 0;
 }
+section{
+    overflow: hidden;
+    width: 100vw;
+}
 
 header {
-    width: auto;
-    height: 650px;
+    width:100vw;
+    height: 100vh;
     position: relative;
     background-position: center center;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
 }
 
 header nav {
@@ -32,19 +34,47 @@ header nav {
     height: 36px;
 }
 
-header ul {
+ul {
+     overflow: hidden;
+    margin: 0 50px;
+/*
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 35px;
     margin-top: 30px;
     margin-bottom: 5px;
+*/
 }
 
-nav li {
+ul li {
     list-style-type: none;
-    margin-right: 30px;
+    float: left;
+/*    margin-right: 30px;*/
 }
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+} @media (max-width: 450px) {
+    nav {
+        display: none;
+    }
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 30px 15px 0;
+    color: #fff;
+    transition: 0.5s;
+    font-family: Futura;
+    font-size: 20pt;
+    font-weight: 300;
+}
+/*
 
 nav a {
     display: block;
@@ -56,30 +86,53 @@ nav a {
     font-family: Futura;
 }
 
+@media (max-width:450px) {
+    nav a {
+        font-size: 0pt;
+    }
+}
+*/
+
 nav a:hover {
     color: #3D5CDB;
 }
 
-header .logo {
+.logo {
     position: absolute;
-    top: 10px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 900px;
-    height: 450px;
+    top:50%;
+    left:50%;
 }
 
-header h1 {
-    margin-top: 27px;
+.logo img {
+    width: 900px;
+    margin:auto;
+}@media (max-width:450px) {
+    .logo img {
+        width: 70vw;
+        margin:auto;
+    }
+}
+
+.logo h1 {
+    margin-top: 30px;
     font-size: 45px;
-    font-weight: 400;
+    font-weight: 100;
     text-align: center;
     color: #fff;
-    font-style: oblique;
+    font-style: italic;
     font-family: Futura;
+}@media (max-width:450px) {
+    .logo h1 {
+        font-size: 100%;
+        text-align: center;
+        margin-top: 20px;
+        color: #fff;
+        font-family: Futura;
+        font-style: italic;
+        font-weight: 100;
+    }
 }
+
 
 .Introduction {
     background-color: #fff;
@@ -169,32 +222,35 @@ h2 {
 
 #Courses {
     overflow: hidden;
-    position:relative;
-    height:auto;
+    position: relative;
+    height: auto;
 }
 
-#particles{
+#particles {
     background-color: rgba(186, 213, 245, 0.4);
-    position:absolute;
-    top:0; left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
-    z-index:-1;
+    z-index: -1;
 }
-.contents{
-    position:relative;
+
+.contents {
+    position: relative;
     z-index: 2;
 }
 
-#Courses h2{
+#Courses h2 {
     padding-top: 50px;
     padding-bottom: 70px;
-    
+
 }
+
 .Courses {
     display: flex;
     justify-content: space-around;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-content: space-around;
 }
 
@@ -212,11 +268,12 @@ h2 {
     font-size: 15pt;
     font-weight: bold;
 }
-.box:last-child{
+
+.box:last-child {
     margin-bottom: 60px;
 }
 
-.box a{
+.box a {
     display: block;
     margin: 30px auto;
     text-decoration: none;
@@ -231,77 +288,106 @@ h2 {
     line-height: 40px;
 }
 
-#HTML #coursebutton{
+#HTML #coursebutton {
     background-color: #F16529;
 }
-#CSS #coursebutton{
+
+#CSS #coursebutton {
     background-color: #2AA9DF;
 }
-#Unity #coursebutton{
+
+#Unity #coursebutton {
     background-color: #333333;
 }
-#Ruby #coursebutton{
+
+#Ruby #coursebutton {
     background-color: #FF5252;
 }
-#JavaScript #coursebutton{
+
+#JavaScript #coursebutton {
     background-color: #FFD700;
 }
-#Swift #coursebutton{
+
+#Swift #coursebutton {
     background-color: #FF7635;
 }
-#Go #coursebutton{
+
+#Go #coursebutton {
     background-color: #73CFDD;
 }
 
-.slide{
-    padding-top: 80px;
-    width:840px;
-    height:140px;
+.slider {
+    width: 840px;
+    height: 140px;
+    margin: 0 auto;
     border: none;
 }
+
 .slick-prev:before,
 .slick-next:before {
     color: #000;
 }
-.slider div img{
-    width:210px;
-    height:140px;
-    
+
+.slider div img {
+    width: 210px;
+    height: 140px;
 }
-iframe{
+
+iframe {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top:55px;
+    margin-top: 55px;
 }
-footer{
-    height:140px;
+
+footer {
+    height: 140px;
 }
-footer h4{
+
+footer h4 {
     margin-top: 60px;
-    font-size:16px;
-    color:#3D5CDB;
+    font-size: 16px;
+    color: #3D5CDB;
     text-align: center;
 }
+
 .fuwatAnime {
- -webkit-animation-fill-mode:both;
- -ms-animation-fill-mode:both;
- animation-fill-mode:both;
- -webkit-animation-duration:1.5s;
- -ms-animation-duration:1.5s;
- animation-duration:1.5s;
- -webkit-animation-name: fuwatAnime;
- -ms-animation-name: fuwatAnime;
- animation-name: fuwatAnime;
- visibility: visible !important;
+    -webkit-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fuwatAnime;
+    -ms-animation-name: fuwatAnime;
+    animation-name: fuwatAnime;
+    visibility: visible !important;
 }
+
 @-webkit-keyframes fuwatAnime {
- 0% { opacity: 0; -webkit-transform: translateY(-20px); }
- 100% { opacity: 1; -webkit-transform: translateY(0); }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
 }
+
 @keyframes fuwatAnime {
- 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
- 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
-
-
